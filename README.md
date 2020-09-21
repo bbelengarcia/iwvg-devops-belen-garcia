@@ -14,4 +14,7 @@
    1. **Next** … **Finish**.
    
 ##Estado del código
-[![Build Status] (https://travis-ci.org/bbelengarcia/iwvg-devops-belen-garcia.svg?branch=develop)
+![Build Status](https://travis-ci.org/bbelengarcia/iwvg-devops-belen-garcia.svg?branch=develop)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops-belen-garcia&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-devops-belen-garcia)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops-belen-garcia&metric=code_smells)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-devops-belen-garcia)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops-belen-garcia&metric=coverage)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-devops-belen-garcia)
