@@ -8,15 +8,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FractionTest {
 
     private Fraction fraction;
+    private Fraction fractionEmptyConstructor;
 
     @BeforeEach
     void before() {
         fraction = new Fraction(1, 2);
+        fractionEmptyConstructor = new Fraction();
     }
 
     @Test
     void testFractionNumerator() {
         assertEquals(1, fraction.getNumerator());
+        assertEquals(1, fractionEmptyConstructor.getNumerator());
     }
 
     @Test
@@ -28,6 +31,7 @@ public class FractionTest {
     @Test
     void testFractionDenominator() {
         assertEquals(2, fraction.getDenominator());
+        assertEquals(1, fractionEmptyConstructor.getDenominator());
     }
 
     @Test
