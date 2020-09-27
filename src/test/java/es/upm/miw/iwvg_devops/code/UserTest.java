@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UserTest {
     private User user;
-    private ArrayList<Fraction> fractionList = new ArrayList<>();
+    private final ArrayList<Fraction> fractionList = new ArrayList<>();
 
     @BeforeEach
     void before() {
