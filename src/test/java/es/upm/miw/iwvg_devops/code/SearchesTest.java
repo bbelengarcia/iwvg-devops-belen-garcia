@@ -11,9 +11,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class SearchesTest {
 
     @Test
-    public void findUserFamilyNameInitialBySomeProperFraction() {
+    public void testSearchesFindUserFamilyNameInitialBySomeProperFraction() {
         assertEquals(List.of("O.", "A.", "O.", "A."), new Searches().findUserFamilyNameInitialBySomeProperFraction()
-        .collect(Collectors.toList()));
+                .collect(Collectors.toList()));
     }
+
+    @Test
+    public void testSearchesFindDecimalImproperFractionByUserName() {
+        assertEquals(List.of(), new Searches().findDecimalImproperFractionByUserName("Antonio")
+                .collect(Collectors.toList()));
+    }
+
 
 }
