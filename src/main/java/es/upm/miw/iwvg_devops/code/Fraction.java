@@ -34,6 +34,30 @@ public class Fraction {
         return (double) numerator / denominator;
     }
 
+    public Boolean isProper() {
+        return this.getNumerator() < this.getDenominator();
+    }
+
+    public Boolean isImproper() {
+        return this.getNumerator() > this.getDenominator();
+    }
+
+    public Boolean isEquivalent(Fraction fraction) {
+        return this.getNumerator() * fraction.getDenominator() == this.getDenominator() * fraction.getNumerator();
+    }
+
+    public Fraction add(Fraction fraction) {
+        return new Fraction(fraction.getNumerator() * this.getDenominator() + this.getNumerator() * fraction.getDenominator(), fraction.getDenominator() * this.getDenominator());
+    }
+
+    public Fraction multiply(Fraction fraction) {
+        return new Fraction(fraction.getNumerator() * this.getNumerator(), fraction.getDenominator() * this.getDenominator());
+    }
+
+    public Fraction divide(Fraction fraction) {
+        return new Fraction(fraction.getDenominator() * this.getNumerator(), fraction.getNumerator() * this.getDenominator());
+    }
+
     @Override
     public String toString() {
         return "Fraction{" +

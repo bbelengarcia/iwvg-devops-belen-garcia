@@ -46,6 +46,42 @@ public class FractionTest {
     }
 
     @Test
+    public void testFractionIsProper() {
+        assertEquals(true, fraction.isProper());
+        assertEquals(false, fractionEmptyConstructor.isProper());
+    }
+
+    @Test
+    public void testFractionIsImproper() {
+        assertEquals(false, fraction.isImproper());
+        assertEquals(false, fractionEmptyConstructor.isImproper());
+    }
+
+    @Test
+    public void testFractionIsEquivalent() {
+        assertEquals(false, fraction.isEquivalent(fractionEmptyConstructor));
+        assertEquals(true, fraction.isEquivalent(new Fraction(2, 4)));
+    }
+
+    @Test
+    public void testFractionAdd() {
+        assertEquals(3, fraction.add(fractionEmptyConstructor).getNumerator());
+        assertEquals(2, fraction.add(fractionEmptyConstructor).getDenominator());
+    }
+
+    @Test
+    public void testFractionMultiply() {
+        assertEquals(1, fraction.multiply(fractionEmptyConstructor).getNumerator());
+        assertEquals(2, fraction.multiply(fractionEmptyConstructor).getDenominator());
+    }
+
+    @Test
+    public void testFractionDivide() {
+        assertEquals(1, fraction.divide(fractionEmptyConstructor).getNumerator());
+        assertEquals(2, fraction.divide(fractionEmptyConstructor).getDenominator());
+    }
+
+    @Test
     void testFractionToString() {
         assertEquals("Fraction{" +
                 "numerator=" + 1 +
