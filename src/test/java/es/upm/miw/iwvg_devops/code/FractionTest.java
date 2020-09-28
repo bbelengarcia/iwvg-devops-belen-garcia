@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FractionTest {
+class FractionTest {
 
     private Fraction fraction;
     private Fraction fractionEmptyConstructor;
@@ -46,37 +46,37 @@ public class FractionTest {
     }
 
     @Test
-    public void testFractionIsProper() {
+    void testFractionIsProper() {
         assertEquals(true, fraction.isProper());
         assertEquals(false, fractionEmptyConstructor.isProper());
     }
 
     @Test
-    public void testFractionIsImproper() {
+    void testFractionIsImproper() {
         assertEquals(false, fraction.isImproper());
         assertEquals(false, fractionEmptyConstructor.isImproper());
     }
 
     @Test
-    public void testFractionIsEquivalent() {
+    void testFractionIsEquivalent() {
         assertEquals(false, fraction.isEquivalent(fractionEmptyConstructor));
         assertEquals(true, fraction.isEquivalent(new Fraction(2, 4)));
     }
 
     @Test
-    public void testFractionAdd() {
+    void testFractionAdd() {
         assertEquals(3, fraction.add(fractionEmptyConstructor).getNumerator());
         assertEquals(2, fraction.add(fractionEmptyConstructor).getDenominator());
     }
 
     @Test
-    public void testFractionMultiply() {
+    void testFractionMultiply() {
         assertEquals(1, fraction.multiply(fractionEmptyConstructor).getNumerator());
         assertEquals(2, fraction.multiply(fractionEmptyConstructor).getDenominator());
     }
 
     @Test
-    public void testFractionDivide() {
+    void testFractionDivide() {
         assertEquals(1, fraction.divide(fractionEmptyConstructor).getNumerator());
         assertEquals(2, fraction.divide(fractionEmptyConstructor).getDenominator());
     }
