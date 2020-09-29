@@ -1,7 +1,6 @@
 package es.upm.miw.iwvg_devops.code;
 
-import org.apache.logging.log4j.LogManager;
-
+import java.util.Collection;
 import java.util.stream.Stream;
 
 class Searches {
@@ -19,6 +18,14 @@ class Searches {
                 .flatMap(user -> user.getFractions().stream()
                         .filter(Fraction::isImproper))
                 .map(Fraction::decimal);
+    }
+
+    Fraction findFractionMultiplicationByUserFamilyName(String familyName) {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFamilyName().equals(familyName))
+                .map(User::getFractions)
+                .flatMap(Collection::stream)
+                .reduce(new Fraction(), Fraction::multiply);
     }
 
 
