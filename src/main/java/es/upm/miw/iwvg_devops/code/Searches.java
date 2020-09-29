@@ -28,5 +28,14 @@ class Searches {
                 .reduce(new Fraction(), Fraction::multiply);
     }
 
+    Fraction findFirstProperFractionByUserId(String id) {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getId().equals(id))
+                .map(User::getFractions)
+                .filter(fractions -> fractions.stream().anyMatch(Fraction::isProper))
+                .flatMap(Collection::stream)
+                .findFirst()
+                .orElse(new Fraction(0, 0));
+    }
 
 }

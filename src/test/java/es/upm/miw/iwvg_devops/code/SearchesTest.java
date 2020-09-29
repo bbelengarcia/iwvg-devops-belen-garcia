@@ -22,9 +22,15 @@ class SearchesTest {
     }
 
     @Test
-    void testSearchFindFractionMultiplicationByUserFamilyName() {
+    void testSearchesFindFractionMultiplicationByUserFamilyName() {
         assertEquals(12, new Searches().findFractionMultiplicationByUserFamilyName("López").getNumerator());
         assertEquals(-240, new Searches().findFractionMultiplicationByUserFamilyName("López").getDenominator());
+    }
+
+    @Test
+    void testSearchesFindFirstProperFractionByUserId(){
+        assertEquals(0, new Searches().findFirstProperFractionByUserId("1").getNumerator());
+        assertEquals(1, new Searches().findFirstProperFractionByUserId("1").getDenominator());
     }
 
 
