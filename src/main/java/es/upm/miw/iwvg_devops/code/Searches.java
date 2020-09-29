@@ -14,7 +14,7 @@ class Searches {
 
     Stream<Double> findDecimalImproperFractionByUserName(String name) {
         return new UsersDatabase().findAll()
-                .filter(user -> user.getName().equals(name))
+                .filter(user -> user.getFamilyName().equals(name))
                 .flatMap(user -> user.getFractions().stream()
                         .filter(Fraction::isImproper))
                 .map(Fraction::decimal);
