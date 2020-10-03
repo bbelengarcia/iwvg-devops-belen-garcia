@@ -19,4 +19,4 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops-belen-garcia&metric=code_smells)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-devops-belen-garcia)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops-belen-garcia&metric=coverage)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-devops-belen-garcia)
 [![BCH compliance](https://bettercodehub.com/edge/badge/bbelengarcia/iwvg-devops-belen-garcia?branch=develop)](https://bettercodehub.com/)
-[![Heroku broken](https://iwvg-devops-belen-garcia.herokuapp.com/system/version-badge)](https://iwvg-devops.herokuapp.com/swagger-ui.html)
+[![Heroku broken](https://iwvg-devops-belen-garcia.herokuapp.com/system/version-badge)](https://iwvg-devops-belen-garcia.herokuapp.com/swagger-ui.html)
